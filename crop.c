@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 //dob= date of birth stored like 05082003
-
 typedef struct Customer{
     char* first_name;
     char* last_name;
@@ -14,7 +13,6 @@ typedef struct Customer{
 typedef struct Car{
     int id;
     int year;
-    int price;
     int mileage;
     int nbr_seats;
     int locm;
