@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 //dob= date of birth stored like 05082003
 typedef struct Customer{
@@ -21,6 +22,8 @@ typedef struct Car{
     char* model;
     char* plate;
     char* class;
+    char* status;
+    bool availability;
 }Car;
 
 typedef struct Rent{
