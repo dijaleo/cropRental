@@ -6,7 +6,7 @@
 typedef struct Customer{
     char* first_name;
     char* last_name;
-    int dob;
+    Date dob;
     int id;
 }Customer;
 
@@ -30,7 +30,7 @@ typedef struct Rent{
     int id;
     int cus_id;
     int car_id;
-    int date;
+    Date date;
     int duration;
 }Rent;
 
@@ -51,5 +51,9 @@ typedef struct rent_list{
     rent_list* previous;
     rent_list* next;
 }rent_list;
+
+typedef struct Date{
+    int dd, mm, yyyy;
+}Date;
 
 //TODO addCustomer, addCar, addRent
