@@ -1,7 +1,7 @@
 I.Choix des structures de données:
 
 1. Customer(Client): Un client possède: un nom et un prénom tous les deux de type pointeur sur char
-(pour les represénter en chaîne de charactères); un id de type int(une sorte de matricule qui sera probablement aléatoire);
+(pour les represénter en chaîne de charactères); un id de type unsigned short(une sorte de matricule qui sera probablement aléatoire);
 et d'une date de naissance de type Date(voir 7); l'option de la représenter en chaîne de charactère est valide, mais je voulais 
 éviter tous les problème lié à des formatage différents.
 
@@ -9,8 +9,8 @@ et d'une date de naissance de type Date(voir 7); l'option de la représenter en 
 et un model (tous les deux des pointeur sur char), un matricule physique (plate, celui present sur sa carte grise) qui est
 lui aussi un pointeur sur char, une classe (e.g. sedan, citadine, coupé...) représenté aussi par un pointeur sur char, un prix
 de location (cost) représenté par un float, un statut (status) (e.g. en location, en réparation...) qui est un pointeur sur char, 
-un booléen represéntant la disponibilité de la voiture(availability), un nombre de places (nbr_seats), un kilométrage (mileage), 
-une année (year), un matricule pour l'identification par le programme, et enfin, le kilométrage lors de la dernière vidange (locm),
+un booléen represéntant la disponibilité de la voiture(availability), un unsigned short matricule pour l'identification par le
+programme, et enfin, un nombre de places (nbr_seats), un kilométrage (mileage), une année (year) et le kilométrage lors de la dernière vidange (locm),
 tous représenté par un int. L'implémentation de la variable locm permettera au programme de prévoir les prochaines vidanges.
 
 3. Rent(Location): Une location est considerée comme une transaction; elle a donc une date et une durée (duration) en plus de son 
