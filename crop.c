@@ -2,17 +2,19 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+unsigned short count=1;
+
 //dob= date of birth stored like 05082003
 typedef struct Customer{
     char* first_name;
     char* last_name;
-    int dob;
-    int id;
+    Date dob;
+    unsigned short id;
 }Customer;
 
 //locm= last oil change mileage
 typedef struct Car{
-    int id;
+    unsigned short id;
     int year;
     int mileage;
     int nbr_seats;
@@ -27,10 +29,10 @@ typedef struct Car{
 }Car;
 
 typedef struct Rent{
-    int id;
+    unsigned short id;
     int cus_id;
     int car_id;
-    int date;
+    Date date;
     int duration;
 }Rent;
 
@@ -52,4 +54,16 @@ typedef struct rent_list{
     rent_list* next;
 }rent_list;
 
+typedef struct Date{
+    int dd, mm, yyyy;
+}Date;
+
 //TODO addCustomer, addCar, addRent
+
+Customer createCustomer(char *fName, char *lName, Date DoB){
+    Customer c;
+    c.first_name=fName;
+    c.last_name=lName;
+    c.dob=DoB;
+    c.id=count++;
+}

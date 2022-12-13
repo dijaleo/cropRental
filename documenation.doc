@@ -1,16 +1,16 @@
 I.Choix des structures de données:
 
 1. Customer(Client): Un client possède: un nom et un prénom tous les deux de type pointeur sur char
-(pour les represénter en chaîne de charactères); un id de type int(une sorte de matricule qui sera probablement aléatoire);
-et d'une date de naissance de type int aussi; l'option de la représenter en chaîne de charactère est valide, mais je voulais 
+(pour les represénter en chaîne de charactères); un id de type unsigned short(une sorte de matricule qui sera probablement aléatoire);
+et d'une date de naissance de type Date(voir 7); l'option de la représenter en chaîne de charactère est valide, mais je voulais 
 éviter tous les problème lié à des formatage différents.
 
 2. Car(Voiture): Une voiture est un petit peu plus complexe à représenter; elle a une marque (make) 
 et un model (tous les deux des pointeur sur char), un matricule physique (plate, celui present sur sa carte grise) qui est
 lui aussi un pointeur sur char, une classe (e.g. sedan, citadine, coupé...) représenté aussi par un pointeur sur char, un prix
 de location (cost) représenté par un float, un statut (status) (e.g. en location, en réparation...) qui est un pointeur sur char, 
-un booléen represéntant la disponibilité de la voiture(availability), un nombre de places (nbr_seats), un kilométrage (mileage), 
-une année (year), un matricule pour l'identification par le programme, et enfin, le kilométrage lors de la dernière vidange (locm),
+un booléen represéntant la disponibilité de la voiture(availability), un unsigned short matricule pour l'identification par le
+programme, et enfin, un nombre de places (nbr_seats), un kilométrage (mileage), une année (year) et le kilométrage lors de la dernière vidange (locm),
 tous représenté par un int. L'implémentation de la variable locm permettera au programme de prévoir les prochaines vidanges.
 
 3. Rent(Location): Une location est considerée comme une transaction; elle a donc une date et une durée (duration) en plus de son 
@@ -22,5 +22,18 @@ le prochain client, pour permettre à l'utilisateur de garder les informations d
 5. Fleet(Flotte): Une structure regroupant toutes les voitures que l'entreprise possède. Elle est composé d'une voiture et d'un 
 pointeur vers la prochaine voiture.
 
-Rent_List(Liste des locations): Elle permet de stocker toutes les transactions de location de voiture que l'entreprise à pu effectuer,
+6. Rent_List(Liste des locations): Elle permet de stocker toutes les transactions de location de voiture que l'entreprise à pu effectuer,
 elle a une location et un pointeur vers la prochaine location.
+
+7. Date: est tout simplement une structure permettant de modeliser une date; elle est constituée d'un jour, un mois, representés par 
+deux chiffres et une année représenté par quatre chiffre tous des entiers.
+
+II. Compteur : 
+
+Le compteur count est une variable unsigned short qui sert pendant l'assignation d'un matricule (id) unique pour les clients, les 
+voitures et les transactions de location.
+
+III. Les fonctions : 
+
+1. createCustomer : Cette fonction permet de créer un client à partir des paramètres fournis (deux pointeurs sur char pour le nom 
+et le prénom, et d'une date de naissance (7)) et de le retourner.
