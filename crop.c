@@ -67,3 +67,19 @@ Customer createCustomer(char *fName, char *lName, Date DoB){
     c.dob=DoB;
     c.id=count++;
 }
+
+Car createCar(int yyyy, int miles, int seat_nbr, int oil, float price, char* ma, char* mo, char* pla, char* cla, char* stat, bool avail){
+    Car c;
+    c.year=yyyy;
+    c.mileage=miles;
+    c.nbr_seats=seat_nbr;
+    c.locm=oil;
+    c.cost=price;
+    c.make=ma;
+    c.model=mo;
+    c.plate=pla;
+    c.class=cla;
+    c.status=stat;
+    c.availability=avail;
+    c.id=count++;
+}

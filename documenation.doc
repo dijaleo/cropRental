@@ -2,7 +2,7 @@ I.Choix des structures de données:
 
 1. Customer(Client): Un client possède: un nom et un prénom tous les deux de type pointeur sur char
 (pour les represénter en chaîne de charactères); un id de type unsigned short(une sorte de matricule qui sera probablement aléatoire);
-et d'une date de naissance de type Date(voir 7); l'option de la représenter en chaîne de charactère est valide, mais je voulais 
+et d'une date de naissance de type Date(voir I.7); l'option de la représenter en chaîne de charactère est valide, mais je voulais 
 éviter tous les problème lié à des formatage différents.
 
 2. Car(Voiture): Une voiture est un petit peu plus complexe à représenter; elle a une marque (make) 
@@ -22,7 +22,7 @@ le prochain client, pour permettre à l'utilisateur de garder les informations d
 5. Fleet(Flotte): Une structure regroupant toutes les voitures que l'entreprise possède. Elle est composé d'une voiture et d'un 
 pointeur vers la prochaine voiture.
 
-6. 6. Rent_List(Liste des locations): Elle permet de stocker toutes les transactions de location de voiture que l'entreprise à pu effectuer,
+6. Rent_List(Liste des locations): Elle permet de stocker toutes les transactions de location de voiture que l'entreprise à pu effectuer,
 elle a une location et un pointeur vers la prochaine location.
 
 7. Date: est tout simplement une structure permettant de modeliser une date; elle est constituée d'un jour, un mois, representés par 
@@ -36,7 +36,7 @@ voitures et les transactions de location.
 III. Les fonctions : 
 
 1. createCustomer : Cette fonction permet de créer un client à partir des paramètres fournis (deux pointeurs sur char pour le nom 
-et le prénom, et d'une date de naissance (7)) et de le retourner.
+et le prénom, et d'une date de naissance (voir I.7)) et de le retourner.
 
-7. Date: est tout simplement une structure permettant de modeliser une date; elle est constituée d'un jour, un mois, representés par 
-deux chiffres et une année représenté par quatre chiffre tous des entiers.
+2. createCustomer : Cette fonction permet de créer une voiture avec ses paramètres qui sont tous les attributs disponible dans une
+voiture (voir I.2).
