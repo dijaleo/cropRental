@@ -22,7 +22,7 @@ le prochain client, pour permettre à l'utilisateur de garder les informations d
 5. Fleet(Flotte): Une structure regroupant toutes les voitures que l'entreprise possède. Elle est composé d'une voiture et d'un 
 pointeur vers la prochaine voiture.
 
-6. Rent_List(Liste des locations): Elle permet de stocker toutes les transactions de location de voiture que l'entreprise à pu effectuer,
+6. 6. Rent_List(Liste des locations): Elle permet de stocker toutes les transactions de location de voiture que l'entreprise à pu effectuer,
 elle a une location et un pointeur vers la prochaine location.
 
 7. Date: est tout simplement une structure permettant de modeliser une date; elle est constituée d'un jour, un mois, representés par 
@@ -37,3 +37,6 @@ III. Les fonctions :
 
 1. createCustomer : Cette fonction permet de créer un client à partir des paramètres fournis (deux pointeurs sur char pour le nom 
 et le prénom, et d'une date de naissance (7)) et de le retourner.
+
+7. Date: est tout simplement une structure permettant de modeliser une date; elle est constituée d'un jour, un mois, representés par 
+deux chiffres et une année représenté par quatre chiffre tous des entiers.
