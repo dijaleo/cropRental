@@ -40,3 +40,6 @@ et le prénom, et d'une date de naissance (voir I.7)) et de le retourner.
 
 2. createCustomer : Cette fonction permet de créer une voiture avec ses paramètres qui sont tous les attributs disponible dans une
 voiture (voir I.2).
+
+3. createRent : Cette fonction crée une transaction de location en utilisant les paramètres fournis, qui correspondent aux attributs
+d'une location (voir I.3).

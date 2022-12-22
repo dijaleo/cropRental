@@ -83,3 +83,12 @@ Car createCar(int yyyy, int miles, int seat_nbr, int oil, float price, char* ma,
     c.availability=avail;
     c.id=count++;
 }
+
+Rent createRent(int customerID, int carID, Date d, int dur){
+    Rent r;
+    r.car_id=carID;
+    r.cus_id=customerID;
+    r.date=d;
+    r.duration=dur;
+    r.id=count++;
+}
