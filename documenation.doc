@@ -43,3 +43,5 @@ voiture (voir I.2).
 
 3. createRent : Cette fonction crée une transaction de location en utilisant les paramètres fournis, qui correspondent aux attributs
 d'une location (voir I.3).
+
+4. createCustomerList : prend en fonction un client qui sera le seul élément de cette liste pour le moment.

@@ -38,20 +38,20 @@ typedef struct Rent{
 
 typedef struct customer_list{
     Customer cus;
-    customer_list* previous;
-    customer_list* next;
+    struct customer_list* previous;
+    struct customer_list* next;
 }customer_list;
 
 typedef struct fleet{
     Car car;
-    fleet* previous;
-    fleet* next;
+    struct fleet* previous;
+    struct fleet* next;
 }fleet;
 
 typedef struct rent_list{
     Rent rent;
-    rent_list* previous;
-    rent_list* next;
+    struct rent_list* previous;
+    struct rent_list* next;
 }rent_list;
 
 typedef struct Date{
@@ -66,6 +66,7 @@ Customer createCustomer(char *fName, char *lName, Date DoB){
     c.last_name=lName;
     c.dob=DoB;
     c.id=count++;
+    return c;
 }
 
 Car createCar(int yyyy, int miles, int seat_nbr, int oil, float price, char* ma, char* mo, char* pla, char* cla, char* stat, bool avail){
@@ -82,6 +83,7 @@ Car createCar(int yyyy, int miles, int seat_nbr, int oil, float price, char* ma,
     c.status=stat;
     c.availability=avail;
     c.id=count++;
+    return c;
 }
 
 Rent createRent(int customerID, int carID, Date d, int dur){
@@ -91,4 +93,13 @@ Rent createRent(int customerID, int carID, Date d, int dur){
     r.date=d;
     r.duration=dur;
     r.id=count++;
+    return r;
+}
+
+customer_list* createCustomerList(Customer c){
+    static customer_list *l;
+    l->cus=c;
+    l->next=NULL;
+    l->previous=NULL;
+    return l;
 }
