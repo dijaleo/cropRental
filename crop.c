@@ -111,3 +111,11 @@ fleet* createFleet(Car c){
     l->previous=NULL;
     return l;
 }
+
+rent_list* createRentList(Rent r){
+    static rent_list *l;
+    l->rent=r;
+    l->next=NULL;
+    l->previous=NULL;
+    return l;
+}
