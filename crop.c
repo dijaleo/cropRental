@@ -103,3 +103,11 @@ customer_list* createCustomerList(Customer c){
     l->previous=NULL;
     return l;
 }
+
+fleet* createFleet(Car c){
+    static fleet *l;
+    l->car=c;
+    l->next=NULL;
+    l->previous=NULL;
+    return l;
+}
