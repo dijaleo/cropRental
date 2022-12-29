@@ -131,3 +131,15 @@ customer_list* addCustomer(Customer c, customer_list *head){
         return createCustomerList(c); //if head is NULL, create a new list and return the pointer to its head
     }
 }
+
+fleet* addCar(Car c, fleet *head){
+    if(head){ //checks if head pointer isn't NULL
+        fleet *p=malloc(sizeof(fleet));
+        head->previous=p;
+        p->next=head;
+        return p;
+    }
+    else {
+        return createFleet(c); //if head is NULL, create a new list and return the pointer to its head
+    }
+}

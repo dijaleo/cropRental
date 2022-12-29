@@ -52,3 +52,6 @@ d'une location (voir I.3).
 
 7. addCustomer : Cette fonction ajoute un client à une liste déja existante et renvoie la nouvelle tête, sinon elle fait 
 appel a createCustomerList (voir III.4) pour en créér une nouvelle et envoyer son pointeur.
+
+8. addCar : Cette fonction ajoute une voiture à une liste déja existante et renvoie la nouvelle tête, sinon elle fait
+appel a createFleet (voir III.5) pour en créér une nouvelle et renvoyer son pointeur.
