@@ -119,3 +119,15 @@ rent_list* createRentList(Rent r){
     l->previous=NULL;
     return l;
 }
+
+customer_list* addCustomer(Customer c, customer_list *head){
+    if(head){ //checks if head pointer isn't NULL
+        customer_list *p=malloc(sizeof(customer_list)); 
+        head->previous=p;
+        p->next=head;
+        return p;
+    }
+    else {
+        return createCustomerList(c); //if head is NULL, create a new list and return the pointer to its head
+    }
+}

@@ -49,3 +49,6 @@ d'une location (voir I.3).
 5. createFleet : prend une voiture en paramètre, qui sera le seul élément de cette liste pour le moment.
 
 6. createRentList : prend une transaction de location en paramètre, qui sera le seul élément de cette liste pour le moment.
+
+7. addCustomer : Cette fonction ajoute un client à une liste déja existante et renvoie la nouvelle tête, sinon elle fait 
+appel a createCustomerList (voir III.4) pour en créér une nouvelle et envoyer son pointeur.
