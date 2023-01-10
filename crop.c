@@ -143,3 +143,15 @@ fleet* addCar(Car c, fleet *head){
         return createFleet(c); //if head is NULL, create a new list and return the pointer to its head
     }
 }
+
+rent_list* addRent(Rent r, rent_list *head){
+    if(head){ //checks if head pointer isn't NULL
+        rent_list *p=malloc(sizeof(rent_list));
+        head->previous=p;
+        p->next=head;
+        return p;
+    }
+    else {
+        return createRentList(r); //if head is NULL, create a new list and return the pointer to its head
+    }
+}

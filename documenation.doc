@@ -51,7 +51,10 @@ d'une location (voir I.3).
 6. createRentList : prend une transaction de location en paramètre, qui sera le seul élément de cette liste pour le moment.
 
 7. addCustomer : Cette fonction ajoute un client à une liste déja existante et renvoie la nouvelle tête, sinon elle fait 
-appel a createCustomerList (voir III.4) pour en créér une nouvelle et envoyer son pointeur.
+appel a createCustomerList (voir III.4) pour en créér une nouvelle et renvoyer son pointeur.
 
 8. addCar : Cette fonction ajoute une voiture à une liste déja existante et renvoie la nouvelle tête, sinon elle fait
 appel a createFleet (voir III.5) pour en créér une nouvelle et renvoyer son pointeur.
+
+9. addRent : Cette fonction ajoute une transaction de location à une liste déja existante et renvoie la nouvelle tête, sinon
+elle fait appel a createRentList (voir III.6) pour en créer une nouvelle et renvoyer son pointeur.
